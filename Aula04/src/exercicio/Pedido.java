@@ -2,11 +2,10 @@ package exercicio;
 
 public class Pedido {
 
-    double valorTotal = 0;
+    double valorTotal;
 
-
-    Pedido(double valorTotal) {
-        this.valorTotal = valorTotal;
+    Pedido() {
+        this.valorTotal = 0;
     }
 
     void novaCompra(double valorProduto){

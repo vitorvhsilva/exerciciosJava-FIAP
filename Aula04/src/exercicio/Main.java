@@ -2,7 +2,7 @@ package exercicio;
 
 public class Main {
     public static void main (String[] args){
-        Pedido pedido = new Pedido(0);
+        Pedido pedido = new Pedido();
 
         ItemPedido livro1 = new ItemPedido("Coletanea Harry Potter", 100.0);
         ItemPedido livro2 = new ItemPedido("Percy Jackson e os Olimpianos", 20.0);
