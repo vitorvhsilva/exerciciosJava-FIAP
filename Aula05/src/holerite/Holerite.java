@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 public class Holerite {
 
-    double valorTotal;
+    String descritivo;
+
+    double pagamento;
     ArrayList<Desconto> descontos;
 
     Holerite (String descritivo, double pagamento, ArrayList<Desconto> descontos) {
@@ -13,7 +15,16 @@ public class Holerite {
         this.descontos = descontos;
     }
 
-    double holerite (double pagamento, String descritivo, ArrayList<Desconto> descontos) {
-
+    double getPagamento () {
+        return pagamento;
     }
+
+    String getDescritivo () {
+        return descritivo;
+    }
+
+    ArrayList<Desconto> getDesconto () {
+        return descontos;
+    }
+
 }
