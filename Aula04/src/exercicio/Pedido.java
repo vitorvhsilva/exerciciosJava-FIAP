@@ -1,18 +1,28 @@
 package exercicio;
 
+import java.util.ArrayList;
+
 public class Pedido {
 
     double valorTotal;
+    ArrayList<ItemPedido> itensPedidos;
 
-    Pedido() {
-        this.valorTotal = 0;
+    Pedido(ArrayList<ItemPedido> itens) {
+        this.itensPedidos = itens;
     }
 
-    void novaCompra(double valorProduto){
-        valorTotal += valorProduto;
-    }
+    double valor(){
 
-    double valorPedido(){
+        for (ItemPedido item : itensPedidos) {
+            valorTotal += item.valor();
+        }
+
+//        for (int i = 0; i < itensPedidos.size(); i++) {
+//            ItemPedido item = itensPedidos.get(i);
+//            valorTotal += item.valor();
+//
+//        }
+
         return valorTotal;
     }
 }

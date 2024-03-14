@@ -1,16 +1,16 @@
 package exercicio;
 
 public class ItemPedido {
-    String nomeProduto;
+    String nome;
 
-    double valorProduto;
+    double valor;
 
-    ItemPedido (String nomeProduto, double valorProduto){
-        this.nomeProduto = nomeProduto;
-        this.valorProduto = valorProduto;
+    ItemPedido (String nome, double valor){
+        this.nome = nome;
+        this.valor = valor;
     }
 
-    double valorItemPedido(){
-        return valorProduto;
+    double valor(){
+        return valor;
     }
 }
