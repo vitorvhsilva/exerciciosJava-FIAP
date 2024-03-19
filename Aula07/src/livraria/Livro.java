@@ -8,4 +8,12 @@ public class Livro {
         this.nome = nome;
         this.valor = valor;
     }
+
+    String getNome() {
+        return nome;
+    }
+
+    double getValor() {
+        return valor;
+    }
 }

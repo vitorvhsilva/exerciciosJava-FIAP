@@ -43,8 +43,8 @@ public class Main {
             System.out.println("Bem vindo " + nomeLog);
             System.out.println("Qual livro deseja comprar hoje?");
             for (int i = 0; i < livros.size(); i++) {
-                System.out.println(livros.get(i).nome + " Digite " + (i + 1) + " para adicionar ao carrinho" + "\n" +
-                        livros.get(i).valor);
+                System.out.println(livros.get(i).getNome() + " Digite " + (i + 1) + " para adicionar ao carrinho" + "\n" +
+                        livros.get(i).getValor());
             }
             System.out.println("Digite o livro desejado: ");
             int escolha = leitor.nextInt();
@@ -63,12 +63,13 @@ public class Main {
                     break;
                 default:
                     System.out.println("Valor incorreto informado");
-
+                    break;
             }
             System.out.println("Livro Selecionado: " + nomeLivro);
             System.out.println("Total do pedido: " + valorTot);
             System.out.println("Informe seu cartão de crédito: ");
             int cc = leitor.nextInt();
+            leitor.close();
             System.out.println("Pedido será enviada para: " + endereco);
         } else {
             System.out.println("Login ou senha errado");
