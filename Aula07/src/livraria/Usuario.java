@@ -1,11 +1,13 @@
 package livraria;
 
+import java.util.ArrayList;
+
 public class Usuario {
     String nome;
     int senha;
-    String endereco;
+    ArrayList<Endereco> endereco;
 
-    Usuario(String nome, int senha, String endereco) {
+    Usuario(String nome, int senha, ArrayList<Endereco> endereco) {
         this.nome = nome;
         this.senha = senha;
         this.endereco = endereco;
