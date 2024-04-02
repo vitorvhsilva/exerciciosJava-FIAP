@@ -24,22 +24,24 @@ public class Main {
 
             roteiros.add(new Roteiro(disciplina, aula, conteudo));
 
-
             System.out.println("Roteiro cadastrado Prof. " + nome + ". \n" +
                     "Deseja cadastrar mais algum roteiro? 1 - Sim, 2 - Não");
             int verificacao = leitor.nextInt();leitor.nextLine();
 
             if (verificacao != 1){
                 continuar = false;
+                System.out.println("Roteiros cadastrados!");
             }
         }
 
-        System.out.println("Os roteiros cadastrados foram:");
+        Professor prof1 = new Professor(nome, roteiros);
 
-        for (Roteiro roteiro : roteiros) {
-            System.out.println("Disciplina: " + roteiro.getDisciplina() + "\n" +
-                    "Aula: " + roteiro.getAula() + "\n" +
-                    "Conteúdo: " + roteiro.getConteudo() + "\n");
+        System.out.println("Prof " + nome + ", os roteiros cadastrados foram:");
+
+        for (int i = 0; i < roteiros.size(); i++) {
+            System.out.println("Disciplina: " + prof1.getRoteiro().get(i).getDisciplina() + "\n" +
+                    "Aula: " + prof1.getRoteiro().get(i).getAula() + "\n" +
+                    "Conteúdo: " + prof1.getRoteiro().get(i).getConteudo() + "\n");
         }
 
         leitor.close();
