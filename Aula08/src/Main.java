@@ -36,7 +36,7 @@ public class Main {
 
         Professor prof1 = new Professor(nome, roteiros);
 
-        System.out.println("Prof " + nome + ", os roteiros cadastrados foram:");
+        System.out.println("Prof " + prof1.getNome() + ", os roteiros cadastrados foram:");
 
         for (int i = 0; i < roteiros.size(); i++) {
             System.out.println("Disciplina: " + prof1.getRoteiro().get(i).getDisciplina() + "\n" +
