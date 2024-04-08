@@ -25,7 +25,7 @@ public class Navio {
 
     public void aumentarVelocidade(double quantidadeKm) {
         if (!atracado) {
-            if (!(quantidadeKm <= 0)) {
+            if (!(quantidadeKm <= 0) && !( (velocidade + quantidadeKm) >= 101) ) {
                 System.out.println(nome + ", velocidade atual: " + velocidade + ", aumentando a velocidade!");
                 velocidade += quantidadeKm;
                 System.out.println("Velocidade atual: " + velocidade + "\n");
@@ -39,7 +39,7 @@ public class Navio {
 
     public void diminuirVelocidade(double quantidadeKm) {
         if (!atracado) {
-            if (!(quantidadeKm > velocidade)) {
+            if (!(quantidadeKm >= velocidade)) {
                 System.out.println(nome + ", velocidade atual: " + velocidade + ", diminuindo a velocidade!");
                 velocidade -= quantidadeKm;
                 System.out.println("Velocidade atual: " + velocidade + "\n");

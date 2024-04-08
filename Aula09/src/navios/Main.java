@@ -7,23 +7,21 @@ public class Main {
         ArrayList<Comandante> comandantes = new ArrayList<>();
 
         comandantes.add(
-                new Comandante("Victor", 23, new Navio("STR-23211", 120.7, true)));
+                new Comandante("Victor", 23, new Navio("STR-23211", 0, true)));
 
         comandantes.add(
                 new Comandante("Robson", 32, new Navio("T-Y23", 82.6, false)));
 
         comandantes.add(
-                new Comandante("Breno", 54, new Navio("UZ-267-R", 144,true)));
+                new Comandante("Breno", 54, new Navio("UZ-267-R", 0,true)));
 
         System.out.println("Comandantes cadastrados: ");
-        for (int i = 0; i < comandantes.size(); i++) {
-            System.out.println("Comandante: " + comandantes.get(i).getNome() + ",\n" +
-                    "Idade: " + comandantes.get(i).getIdade() + ",\n" +
-                    "Navio: " + comandantes.get(i).getNavio().getNome() + ",\n" +
-                    "Velocidade Atual do Navio: " + comandantes.get(i).getNavio().getVelocidade() + "\n");
+        for (Comandante comandante: comandantes) {
+            System.out.println("Comandante: " + comandante.getNome() + ",\n" +
+                    "Idade: " + comandante.getIdade() + ",\n" +
+                    "Navio: " + comandante.getNavio().getNome() + ",\n" +
+                    "Velocidade Atual do Navio: " + comandante.getNavio().getVelocidade() + "\n");
         }
-
-        comandantes.get(0).getNavio().aumentarVelocidade(78.2);
 
         comandantes.get(0).getNavio().atracarNavio();
 
@@ -42,21 +40,18 @@ public class Main {
         comandantes.get(1).getNavio().diminuirVelocidade(65);
 
         comandantes.get(1).getNavio().atracarNavio();
-
+//
         comandantes.get(2).getNavio().atracarNavio();
 
         comandantes.get(2).getNavio().diminuirVelocidade(90);
 
-        comandantes.get(2).getNavio().aumentarVelocidade(200);
+        comandantes.get(2).getNavio().aumentarVelocidade(70);
 
-        comandantes.get(2).getNavio().aumentarVelocidade(13);
+        comandantes.get(2).getNavio().aumentarVelocidade(5);
 
         comandantes.get(2).getNavio().diminuirVelocidade(90);
 
-        comandantes.get(2).getNavio().diminuirVelocidade(127);
-
         comandantes.get(2).getNavio().atracarNavio();
-
 
     }
 }
