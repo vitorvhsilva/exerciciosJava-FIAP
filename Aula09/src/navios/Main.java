@@ -19,39 +19,39 @@ public class Main {
         for (Comandante comandante: comandantes) {
             System.out.println("Comandante: " + comandante.getNome() + ",\n" +
                     "Idade: " + comandante.getIdade() + ",\n" +
-                    "Navio: " + comandante.getNavio().getNome() + ",\n" +
-                    "Velocidade Atual do Navio: " + comandante.getNavio().getVelocidade() + "\n");
+                    "Navio: " + comandante.getNavioNome() + ",\n" +
+                    "Velocidade Atual do Navio: " + comandante.getNavioVelocidade() + "\n");
         }
 
-        comandantes.get(0).getNavio().atracarNavio();
+        comandantes.get(0).atracarNavio();
 
-        comandantes.get(0).getNavio().aumentarVelocidade(78.2);
+        comandantes.get(0).aumentarVelocidade(78.2);
 
-        comandantes.get(0).getNavio().diminuirVelocidade(42.2);
+        comandantes.get(0).diminuirVelocidade(42.2);
 
-        comandantes.get(0).getNavio().diminuirVelocidade(40.2);
+        comandantes.get(0).diminuirVelocidade(40.2);
 
-        comandantes.get(0).getNavio().atracarNavio();
+        comandantes.get(0).atracarNavio();
 
-        comandantes.get(1).getNavio().diminuirVelocidade(90);
+        comandantes.get(1).diminuirVelocidade(90);
 
-        comandantes.get(1).getNavio().atracarNavio();
+        comandantes.get(1).atracarNavio();
 
-        comandantes.get(1).getNavio().diminuirVelocidade(65);
+        comandantes.get(1).diminuirVelocidade(65);
 
-        comandantes.get(1).getNavio().atracarNavio();
-//
-        comandantes.get(2).getNavio().atracarNavio();
+        comandantes.get(1).atracarNavio();
 
-        comandantes.get(2).getNavio().diminuirVelocidade(90);
+        comandantes.get(2).atracarNavio();
 
-        comandantes.get(2).getNavio().aumentarVelocidade(70);
+        comandantes.get(2).diminuirVelocidade(90);
 
-        comandantes.get(2).getNavio().aumentarVelocidade(5);
+        comandantes.get(2).aumentarVelocidade(70);
 
-        comandantes.get(2).getNavio().diminuirVelocidade(90);
+        comandantes.get(2).aumentarVelocidade(5);
 
-        comandantes.get(2).getNavio().atracarNavio();
+        comandantes.get(2).diminuirVelocidade(90);
+
+        comandantes.get(2).atracarNavio();
 
     }
 }

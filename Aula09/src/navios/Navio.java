@@ -15,62 +15,26 @@ public class Navio {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public double getVelocidade() {
         return velocidade;
     }
 
-    public void aumentarVelocidade(double quantidadeKm) {
-        if (!atracado) {
-            if (!(quantidadeKm <= 0) && !( (velocidade + quantidadeKm) >= 101) ) {
-                System.out.println(nome + ", velocidade atual: " + velocidade + ", aumentando a velocidade!");
-                velocidade += quantidadeKm;
-                System.out.println("Velocidade atual: " + velocidade + "\n");
-                return;
-            }
-            System.out.println("Valor não permitido! \n");
-            return;
-        }
-        System.out.println("Não é possível fazer isso com o navio atracado! \n");
+    public boolean isAtracado() {
+        return atracado;
     }
 
-    public void diminuirVelocidade(double quantidadeKm) {
-        if (!atracado) {
-            if (!(quantidadeKm >= velocidade)) {
-                System.out.println(nome + ", velocidade atual: " + velocidade + ", diminuindo a velocidade!");
-                velocidade -= quantidadeKm;
-                System.out.println("Velocidade atual: " + velocidade + "\n");
-                return;
-            }
-            System.out.println("Valor não permitido! \n");
-            return;
-        }
-        System.out.println("Não é possível fazer isso com o navio atracado! \n");
+    public void setVelocidade(double velocidade) {
+        this.velocidade = velocidade;
     }
 
-    public void atracarNavio() {
-        if (atracado) {
-            System.out.println("O " + nome + " está se preparando para zarpar" );
-            System.out.println("O " + nome + " saiu do porto!" );
-            velocidade = 20;
-            System.out.println("Velocidade atual: " + velocidade + "\n");
-            atracado = false;
-            return;
-        }
-        if (velocidade < 20) {
-            velocidade = 0;
-            System.out.println("O " + nome + " está se preparando para atracar");
-            System.out.println("O " + nome + " entrou no porto!");
-            System.out.println("Velocidade atual: " + velocidade + "\n");
-            atracado = true;
-            return;
-        }
-        System.out.println("Não é possivel atracar com uma velocidade tão alta! \n");
+    public void setAtracado(boolean atracado) {
+        this.atracado = atracado;
     }
 
-
-
+    public void aumentarVelocidade(double incremento) {
+        velocidade += incremento;
+    }
+    public void diminuirVelocidade(double incremento) {
+        velocidade -= incremento;
+    }
 }
