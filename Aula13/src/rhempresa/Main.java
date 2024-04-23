@@ -13,7 +13,9 @@ public class Main {
         ArrayList<Funcionario> funcionarios2 = new ArrayList<>();
         ArrayList<Funcionario> funcionarios3 = new ArrayList<>();
 
-        ArrayList<Gerente> colaboradores = new ArrayList<>();
+        ArrayList<Gerente> gerentes = new ArrayList<>();
+
+        ArrayList<Funcionario> colaboradores = new ArrayList<>();
 
         funcionarios1.add(new Funcionario("Vitor", "2425267899" , 2000.0));
         funcionarios1.add(new Funcionario("João", "2425267899", 3400.0));
@@ -27,16 +29,20 @@ public class Main {
         funcionarios3.add(new Funcionario("Arthur", "2425267899", 2310.0));
         funcionarios3.add(new Funcionario("Augusto", "89796958111", 4500.0));
 
-        colaboradores.add(new Gerente("Roberio", "3245202283", 12540.0, funcionarios1));
-        colaboradores.add(new Gerente("Joresvaldo", "39324098243", 19920.0, funcionarios2));
-        colaboradores.add(new Gerente("Luis", "26292098222", 23400.0, funcionarios3));
+        gerentes.add(new Gerente("Roberio", "3245202283", 12540.0, funcionarios1));
+        gerentes.add(new Gerente("Joresvaldo", "39324098243", 19920.0, funcionarios2));
+        gerentes.add(new Gerente("Luis", "26292098222", 23400.0, funcionarios3));
 
-        System.out.println("Colaboradores da empresa: ");
-        for (Gerente colaborador : colaboradores) {
-            System.out.println(colaborador.getNome());
-            for (Funcionario funcionario : colaborador.getFuncionarios()) {
-                System.out.println(funcionario.getNome());
+        for (Gerente gerente : gerentes) {
+            colaboradores.add(gerente);
+            for (Funcionario funcionario : gerente.getFuncionarios()) {
+                colaboradores.add(funcionario);
             }
+        }
+
+        System.out.println("Colaboradores da Empresa: ");
+        for (Funcionario colaborador: colaboradores) {
+            System.out.println(colaborador.getNome());
         }
 
 
