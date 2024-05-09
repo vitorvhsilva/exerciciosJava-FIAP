@@ -15,18 +15,14 @@ public class ContaCorrente {
 		if(saldo < saque) {
 			throw new SaqueInvalidoException("Valor do saque maior que o saldo atual. Saque não realizado");
 		}
-		else {
-			saldo -= saque;	
-		}
+		saldo -= saque;
 	}
 	
 	public void depositar(double deposito) throws DepositoInvalidoException {
 		if(deposito <= 0) {
 			throw new DepositoInvalidoException("Valor do depósito negativo. Depósito não realizado");
 		}
-		else {
-			saldo += deposito;	
-		}
+		saldo += deposito;
 	}
 	
 	public double saldo() {
