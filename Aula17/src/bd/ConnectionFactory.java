@@ -1,8 +1,7 @@
 package bd;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDate;
 
 public class ConnectionFactory {
     public Connection obterComunicacao(String url, String login, String senha) {
@@ -24,4 +23,5 @@ public class ConnectionFactory {
             System.out.println(e.getMessage());
         }
     }
+
 }
