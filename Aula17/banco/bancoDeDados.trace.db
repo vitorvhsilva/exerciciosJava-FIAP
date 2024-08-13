@@ -22,5 +22,5 @@ INSERT INTO professores (nome, salario) VALUES (?, ?, ?) [21002-230]
 	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
 	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
 	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
-	at bd.ProfessoresService.inserirDadosTabProf(ProfessoresService.java:45)
+	at dao.ProfessorDAO.inserirDadosTabProf(ProfessoresService.java:45)
 	at Main.main(Main.java:23)

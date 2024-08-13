@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="h2-2.3.230 (2)" level="project" />
+    <orderEntry type="library" name="h2-2.3.232" level="project" />
   </component>
 </module>

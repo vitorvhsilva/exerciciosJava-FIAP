@@ -1,27 +1,33 @@
-import bd.ConnectionFactory;
-import bd.FuncionariosService;
-import bd.ProfessoresService;
+import dao.FuncionarioDAO;
+import dao.ProfessorDAO;
+import dto.FuncionarioDTO;
+import dto.ProfessorDTO;
+import model.Funcionario;
+import model.Professor;
 
-import java.sql.Connection;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ConnectionFactory factory = new ConnectionFactory();
-        Connection conexao = factory.obterComunicacao("jdbc:h2:./banco/bancoDeDados",
-                "sa", "");
 
-        FuncionariosService funcionariosService = new FuncionariosService(conexao);
+        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+        ProfessorDAO professorDAO = new ProfessorDAO();
 
-        funcionariosService.deletaTabFunc();
-        funcionariosService.criaTabFunc();
-        funcionariosService.inserirDadosTabFunc("Vitor", "12345", 2006, 3, 28);
+        funcionarioDAO.deletaTabFunc();
+        funcionarioDAO.criaTabFunc();
+        funcionarioDAO.inserirDadosTabFunc(new Funcionario("Vitor", "12345",
+                LocalDate.of(2006, 3, 28)));
+        ArrayList<FuncionarioDTO> funcionarios = funcionarioDAO.pegarTodos();
+        funcionarios.forEach(System.out::println);
+        funcionarioDAO.fechar();
 
-        ProfessoresService professoresService = new ProfessoresService(conexao);
+        professorDAO.deletaTabProf();
+        professorDAO.criaTabProf();
+        professorDAO.inserirDadosTabProf(new Professor("Rodrigão", 10299921.0));
+        ArrayList<ProfessorDTO> professores = professorDAO.pegarTodos();
+        professores.forEach(System.out::println);
+        professorDAO.fechar();
 
-        professoresService.deletaTabProf();
-        professoresService.criaTabProf();
-        professoresService.inserirDadosTabProf("Rodrigao", 1223344312.0);
-
-        factory.fecharComunicacao(conexao);
     }
 }
