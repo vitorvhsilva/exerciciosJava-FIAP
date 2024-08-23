@@ -1,0 +1,26 @@
+2024-08-08 20:27:08.844782-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "        CREATE TABLE professores (\000a        id BIGINT NOT NULL AUTO_INCREMENT,\000a        nome VARCHAR(100),\000a        salario NUMERIC(15, 2),\000a[*])\000a"; expected "identifier"; SQL statement:
+        CREATE TABLE professores (
+        id BIGINT NOT NULL AUTO_INCREMENT,
+        nome VARCHAR(100),
+        salario NUMERIC(15, 2),
+)
+ [42001-230]
+2024-08-08 20:27:27.765709-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column count does not match; SQL statement:
+INSERT INTO professores (nome, salario) VALUES (?, ?, ?) [21002-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.command.dml.Insert.doPrepare(Insert.java:294)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:489)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:644)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:560)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:93)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:315)
+	at dao.ProfessorDAO.inserirDadosTabProf(ProfessoresService.java:45)
+	at Main.main(Main.java:23)
