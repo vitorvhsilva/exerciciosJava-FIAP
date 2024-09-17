@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "6d678367-4ce5-4f81-8a60-c13d2ebc5cf2",
+		"name": "Biblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2004722",
+		"_collection_link": "https://crimson-zodiac-778758.postman.co/workspace/Alura-Bank~e04b7ac4-1ac1-4c12-9151-66aae393d95c/collection/2004722-6d678367-4ce5-4f81-8a60-c13d2ebc5cf2?action=share&source=collection_link&creator=2004722"
+	},
+	"item": [
+		{
+			"name": "cadastrar novo livro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Domain Driven Design\",\n    \"autor\": \"Eric Evans\",\n    \"preco\": 150.00\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/livros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"livros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obter todos os livros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/livros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"livros"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
