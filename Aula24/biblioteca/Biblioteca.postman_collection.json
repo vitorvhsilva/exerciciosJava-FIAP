@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "544124ee-97ef-474b-922f-2b48589f1f46",
+		"name": "biblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "2004722",
+		"_collection_link": "https://crimson-zodiac-778758.postman.co/workspace/Alura-Bank~e04b7ac4-1ac1-4c12-9151-66aae393d95c/collection/2004722-544124ee-97ef-474b-922f-2b48589f1f46?action=share&source=collection_link&creator=2004722"
+	},
+	"item": [
+		{
+			"name": "obter todos livros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/livros"
+			},
+			"response": []
+		},
+		{
+			"name": "cadastrar novo livro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Domain Driven Design\",\n    \"autor\": \"Eric Evans\",\n    \"preco\": 150.00\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/livros"
+			},
+			"response": []
+		},
+		{
+			"name": "cadastrar novo aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Claudia Maria\",\n    \"chamada\": \"550222\",\n    \"turma\": \"1TDSPY\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/alunos"
+			},
+			"response": []
+		},
+		{
+			"name": "consulta alunos por turma e chamada",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/alunos/1TDSPY/550222"
+			},
+			"response": []
+		},
+		{
+			"name": "consulta alunos por",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/alunos/1TDSPY"
+			},
+			"response": []
+		}
+	]
+}

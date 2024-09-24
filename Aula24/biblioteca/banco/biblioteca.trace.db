@@ -1,0 +1,7 @@
+2023-09-27 19:58:55.480995-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE alunos (\000d\000a\0009id LONG PRIMARY KEY [*]AUTO INCREMENT, \000d\000a\0009nome VARCHAR(100), \000d\000a\0009chamada VARCHAR(6),\000d\000a\0009turma VARCHAR(6))"; expected "HASH, CONSTRAINT, COMMENT, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE alunos (
+	id LONG PRIMARY KEY AUTO INCREMENT, 
+	nome VARCHAR(100), 
+	chamada VARCHAR(6),
+	turma VARCHAR(6)) [42001-222]
