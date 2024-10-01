@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "de57413b-af2e-4fa4-9cc9-085e74078fa5",
+		"name": "biblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "2004722",
+		"_collection_link": "https://crimson-zodiac-778758.postman.co/workspace/Alura-Bank~e04b7ac4-1ac1-4c12-9151-66aae393d95c/collection/2004722-de57413b-af2e-4fa4-9cc9-085e74078fa5?action=share&source=collection_link&creator=2004722"
+	},
+	"item": [
+		{
+			"name": "obter todos livros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/livros"
+			},
+			"response": []
+		},
+		{
+			"name": "cadastrar novo livro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Domain Driven Design\",\n    \"autor\": \"Eric Evans\",\n    \"preco\": 150.00\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/livros"
+			},
+			"response": []
+		},
+		{
+			"name": "cadastrar novo aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"André Pereira\",\n    \"chamada\": \"673433\",\n    \"turma\": \"1TDSPY\",\n    \"endereco\": {\n        \"cep\": \"01001000\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/alunos"
+			},
+			"response": []
+		},
+		{
+			"name": "obter aluno por turma",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/alunos/1TDSPY"
+			},
+			"response": []
+		},
+		{
+			"name": "obter aluno por turma e chamada",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/alunos/1TDSPY/550675"
+			},
+			"response": []
+		},
+		{
+			"name": "consulta cep",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://viacep.com.br/ws/01001000/json"
+			},
+			"response": []
+		}
+	]
+}
